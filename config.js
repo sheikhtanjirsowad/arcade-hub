@@ -18,7 +18,7 @@ const CONFIG = {
     subtitle:
       "A clean little corner of the internet packed with games, links and good vibes. No clutter. Just fun.",
     primaryBtn: { text: "Browse Games", href: "#games" },
-    secondaryBtn: { text: "Contact Me", href: "#contact" },
+    secondaryBtn: { text: "Follow Me", href: "#stuff" },
   },
 
   // ---- Games (the big clickable list) ----
@@ -71,25 +71,44 @@ const CONFIG = {
     ],
   },
 
-  // ---- "Other stuff" links ----
-  links: [
-    { icon: "🌐", title: "My Website",    desc: "Portfolio & projects",   href: "#" },
-    { icon: "💬", title: "Discord",       desc: "Join the community",     href: "#" },
-    { icon: "📺", title: "YouTube",       desc: "Gameplay & reviews",     href: "#" },
-    { icon: "🐦", title: "Twitter / X",   desc: "Random thoughts",        href: "#" },
+  // ---- BIG social cards (the eye-catchers) ----
+  socialCards: [
+    {
+      platform: "Instagram",
+      handle: "@chopped_sowad",
+      cta: "Follow on Instagram",
+      icon: "📸",
+      url: "https://www.instagram.com/chopped_sowad",
+      c1: "#feda75", c2: "#fa7e1e", c3: "#d62976", c4: "#962fbf",
+    },
+    {
+      platform: "Facebook",
+      handle: "Sowad Temesgen",
+      cta: "Add me on Facebook",
+      icon: "📘",
+      url: "https://www.facebook.com/profile.php?id=61581838981920",
+      c1: "#0866ff", c2: "#1877f2", c3: "#0a4cc2", c4: "#0866ff",
+    },
+    {
+      platform: "Twitter / X",
+      handle: "@chopped_sowad",
+      cta: "Follow on X",
+      icon: "🐦",
+      url: "https://x.com/chopped_sowad",
+      c1: "#1d9bf0", c2: "#0f1419", c3: "#1d9bf0", c4: "#7856ff",
+    },
   ],
 
   // ---- Contact / footer ----
   contact: {
     heading: "Get in touch",
     text: "Want a game added or just want to say hi? Drop a message.",
-    email: "hello@example.com",
+    email: "temesowad@gmail.com",
   },
   socials: [
-    { icon: "💬", href: "#", label: "Discord" },
-    { icon: "📺", href: "#", label: "YouTube" },
-    { icon: "🐦", href: "#", label: "Twitter" },
-    { icon: "🐙", href: "#", label: "GitHub" },
+    { icon: "📸", href: "https://www.instagram.com/chopped_sowad", label: "Instagram" },
+    { icon: "📘", href: "https://www.facebook.com/profile.php?id=61581838981920", label: "Facebook" },
+    { icon: "🐦", href: "https://x.com/chopped_sowad", label: "Twitter" },
   ],
   footerNote: "Built with caffeine & curiosity.",
 

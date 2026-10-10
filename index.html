@@ -35,8 +35,7 @@
     <nav class="nav-links">
       <a href="#games">Games</a>
       <a href="#about">About</a>
-      <a href="#stuff">Stuff</a>
-      <a href="#contact">Contact</a>
+      <a href="#stuff">Socials</a>
     </nav>
     <a class="nav-cta" href="#games">Play Now</a>
     <button class="nav-burger" id="burger" aria-label="Menu">
@@ -56,7 +55,7 @@
       <p class="hero-sub reveal" id="heroSub"></p>
       <div class="hero-actions reveal">
         <a class="btn btn-primary" id="heroBtn1" href="#games"><span>Browse Games</span></a>
-        <a class="btn btn-ghost" id="heroBtn2" href="#contact"><span>Contact Me</span></a>
+        <a class="btn btn-ghost" id="heroBtn2" href="#stuff"><span>Follow Me</span></a>
       </div>
       <div class="scroll-hint reveal">
         <span></span> scroll
@@ -97,30 +96,20 @@
       </div>
     </section>
 
-    <!-- ================= OTHER STUFF ================= -->
+    <!-- ================= SOCIALS ================= -->
     <section class="section" id="stuff">
       <div class="section-head reveal">
-        <span class="section-tag">03 — Links</span>
-        <h2 class="section-title">Other <em>Stuff</em></h2>
-        <p class="section-desc">Socials, projects, anything else you want to plug in.</p>
+        <span class="section-tag">03 — Socials</span>
+        <h2 class="section-title">Follow <em>Me</em></h2>
+        <p class="section-desc">Come say hi — I actually post stuff. Tap a card and slide into my DMs.</p>
       </div>
-      <div class="grid links-grid" id="linksGrid"></div>
-    </section>
-
-    <!-- ================= CONTACT ================= -->
-    <section class="section" id="contact">
-      <div class="contact-card reveal">
-        <div class="contact-glow"></div>
-        <span class="section-tag">04 — Say Hi</span>
-        <h2 class="section-title" id="contactHeading">Get in touch</h2>
-        <p class="section-desc" id="contactText"></p>
-        <a class="btn btn-primary btn-lg" id="mailBtn" href="#"><span>✉ Email Me</span></a>
-        <div class="socials" id="socials"></div>
-      </div>
+      <div class="social-cards" id="socialCards"></div>
     </section>
 
     <footer class="footer">
       <span>© <span id="year"></span> <span id="footerBrand"></span></span>
+      <div class="socials" id="socials"></div>
+      <a class="footer-mail" id="footerMail" href="#">✉ <span id="footerMailText"></span></a>
       <span id="footerNote"></span>
     </footer>
   </main>

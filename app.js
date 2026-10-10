@@ -44,11 +44,9 @@
     </div>`).join("");
 
   /* ---------- contact ---------- */
-  $("#contactHeading").textContent = CONFIG.contact.heading;
-  $("#contactText").textContent = CONFIG.contact.text;
-  const mail = $("#mailBtn");
+  const mail = $("#footerMail");
   mail.href = "mailto:" + CONFIG.contact.email;
-  mail.querySelector("span").textContent = "✉ " + CONFIG.contact.email;
+  $("#footerMailText").textContent = CONFIG.contact.email;
   $("#socials").innerHTML = CONFIG.socials.map(s =>
     `<a href="${s.href}" aria-label="${s.label}" target="_blank" rel="noopener">${s.icon}</a>`).join("");
 
@@ -80,15 +78,18 @@
     gameToggle.setAttribute("aria-expanded", open);
   });
 
-  const linksGrid = $("#linksGrid");
-  linksGrid.innerHTML = CONFIG.links.map(l => `
-    <a class="card link-card" href="${l.href}" target="_blank" rel="noopener" style="--glow:${l.color || "#00d4ff"}">
-      <span class="card-icon">${l.icon}</span>
-      <div class="card-inner">
-        <h3>${l.title}</h3>
-        <p>${l.desc}</p>
-      </div>
-      <span class="card-arrow">↗</span>
+  /* ---------- big social cards ---------- */
+  const socialCards = $("#socialCards");
+  socialCards.innerHTML = CONFIG.socialCards.map((s, i) => `
+    <a class="social-card" href="${s.url}" target="_blank" rel="noopener"
+       style="--c1:${s.c1}; --c2:${s.c2}; --c3:${s.c3}; --c4:${s.c4}; --i:${i}">
+      <span class="sc-border"></span>
+      <span class="sc-icon">${s.icon}</span>
+      <span class="sc-meta">
+        <span class="sc-platform">${s.platform}</span>
+        <span class="sc-handle">${s.handle}</span>
+      </span>
+      <span class="sc-cta">${s.cta} <b>↗</b></span>
     </a>`).join("");
 
   /* ---------- cursor glow ---------- */
@@ -134,7 +135,7 @@
       }
     });
   }, { threshold: 0.15 });
-  $$(".reveal, .card").forEach(el => io.observe(el));
+  $$(".reveal, .card, .social-card").forEach(el => io.observe(el));
 
   /* ---------- 3D tilt + card spot ---------- */
   $$(".card").forEach(card => {
